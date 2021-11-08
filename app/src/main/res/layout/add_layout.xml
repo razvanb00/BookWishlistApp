@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:fontFamily="sans-serif"
+        android:text="Titlu:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/titluTextInput"
+        app:layout_constraintStart_toStartOf="@+id/titluTextInput" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Autor:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/autorTextInput"
+        app:layout_constraintStart_toStartOf="@+id/autorTextInput" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Descriere:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/descriereTextInput"
+        app:layout_constraintStart_toStartOf="@+id/descriereTextInput" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/titluTextInput"
+        android:layout_width="367dp"
+
+        android:layout_height="43dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/autorTextInput"
+        android:layout_width="367dp"
+
+        android:layout_height="43dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/titluTextInput"
+        app:layout_constraintTop_toBottomOf="@+id/titluTextInput" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/descriereTextInput"
+        android:layout_width="364dp"
+
+        android:layout_height="101dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/autorTextInput"
+        app:layout_constraintTop_toBottomOf="@+id/autorTextInput" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Format:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/format_group"
+        app:layout_constraintStart_toStartOf="@+id/format_group" />
+
+
+
+    <RadioGroup
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:orientation="vertical"
+        android:id="@+id/format_group"
+        app:layout_constraintStart_toStartOf="@+id/descriereTextInput"
+        app:layout_constraintTop_toBottomOf="@+id/descriereTextInput">
+
+        <RadioButton
+            android:id="@+id/radio_phisical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="FIZIC" />
+
+        <RadioButton
+            android:id="@+id/radio_pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="PDF" />
+
+        <RadioButton
+            android:id="@+id/radio_audiobook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="AUDIOBOOK" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="Add book"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
